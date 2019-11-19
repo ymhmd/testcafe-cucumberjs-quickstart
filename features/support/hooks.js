@@ -22,7 +22,7 @@ function createTestFile() {
 }
 
 function runTest(iteration, browser) {
-    createTestCafe('localhost', 1338 + iteration, 1339 + iteration)
+    createTestCafe('localhost')
         .then(function(tc) {
             cafeRunner = tc;
             const runner = tc.createRunner();
@@ -52,7 +52,7 @@ Before(function() {
 });
 
 After(function() {
-    fs.unlinkSync('test.js');
+    //fs.unlinkSync('test.js');
     testControllerHolder.free();
 });
 

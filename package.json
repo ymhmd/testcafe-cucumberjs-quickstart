@@ -3,7 +3,7 @@
   "description": "Quick Start for TestCafe and Cucumber integrating with CI/CD CircleCI and TravisCI",
   "author": "Yasin Mhmd",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js  --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\"",
+    "test": "./node_modules/.bin/cucumber-js --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\"",
     "test-report": "./node_modules/.bin/cucumber-js.cmd --format json:./reports/report.json",
     "test-chrome": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
     "test-ie": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"ie\\\"}\"",
@@ -14,6 +14,7 @@
     "test-chrome-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
     "test-chrome-headless": "./node_modules/.bin/cucumber-js  --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\"",
     "test-chrome-headless-with-report": "./node_modules/.bin/cucumber-js  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\"",
+    "test-chrome-headless-with-report-parallel": "./node_modules/.bin/cucumber-js --parallel=2 --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\"",
     "html-reporter": "node report-generator.js"
   },
   "dependencies": {

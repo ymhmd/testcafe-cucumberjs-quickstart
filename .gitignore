@@ -23,3 +23,5 @@ cucumber_report.json
 
 .env
 .idea/
+
+test.js
