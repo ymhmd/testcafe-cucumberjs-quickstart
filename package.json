@@ -3,7 +3,7 @@
   "description": "Quick Start for TestCafe and Cucumber integrating with CI/CD CircleCI and TravisCI",
   "author": "Yasin Mhmd",
   "scripts": {
-    "test": "./node_modules/.bin/cucumber-js",
+    "test": "./node_modules/.bin/cucumber-js  --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\"",
     "test-report": "./node_modules/.bin/cucumber-js.cmd --format json:./reports/report.json",
     "test-chrome": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
     "test-ie": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"ie\\\"}\"",
