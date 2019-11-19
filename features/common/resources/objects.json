@@ -1,0 +1,5 @@
+{
+  "googleHomePage": {
+    "searchTextFieldXpath": "//input[@name = 'q']"
+  }
+}

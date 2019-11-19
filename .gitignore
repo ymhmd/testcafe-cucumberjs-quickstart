@@ -1,0 +1,25 @@
+# Dependency directory
+node_modules
+
+# Screenshots
+reports/screenshots
+
+# Added empty reports folder
+reports/*
+!reports/.gitkeep
+
+#Linter
+.eslintrc.json
+
+#Package-lock
+package-lock.json
+
+# sonarLint
+.sonarLint
+
+#reports
+reports
+cucumber_report.json
+
+.env
+.idea/

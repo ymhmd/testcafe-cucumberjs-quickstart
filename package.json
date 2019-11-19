@@ -1,0 +1,29 @@
+{
+  "name": "testcafe-cucumber",
+  "description": "Quick Start for TestCafe and Cucumber integrating with CI/CD CircleCI and TravisCI",
+  "author": "Yasin Mhmd",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js",
+    "test-report": "./node_modules/.bin/cucumber-js.cmd --format json:./reports/report.json",
+    "test-chrome": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
+    "test-ie": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"ie\\\"}\"",
+    "test-edge": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"edge\\\"}\"",
+    "test-firefox": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"firefox\\\"}\"",
+    "test-opera": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"opera\\\"}\"",
+    "test-safari": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"safari\\\"}\"",
+    "test-chrome-report": "./node_modules/.bin/cucumber-js.cmd  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
+    "test-chrome-headless": "./node_modules/.bin/cucumber-js  --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\"",
+    "test-chrome-headless-with-report": "./node_modules/.bin/cucumber-js  --format json:./reports/report.json --world-parameters \"{\\\"browser\\\": \\\"chrome:headless\\\"}\"",
+    "html-reporter": "node report-generator.js"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "base64-img": "^1.0.4",
+    "cucumber": "^5.1.0",
+    "dotenv": "^8.1.0",
+    "multiple-cucumber-html-reporter": "^1.11.8",
+    "npm": "^6.0.0",
+    "testcafe": "^1.1.0",
+    "testcafe-reporter-cucumber-json": "^1.2.0"
+  }
+}
