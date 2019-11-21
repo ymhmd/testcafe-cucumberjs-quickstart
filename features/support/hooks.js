@@ -1,5 +1,6 @@
 const fs = require('fs');
 const createTestCafe = require('testcafe');
+const RequestLogger = require('testcafe').RequestLogger;
 const testControllerHolder = require('../support/testControllerHolder');
 const {AfterAll, setDefaultTimeout, Before, After, Status} = require('cucumber');
 const errorHandling = require('../support/errorHandling');
@@ -46,7 +47,13 @@ Before(function() {
     runTest(n, this.setBrowser());
     createTestFile();
     n += 2;
-    return this.waitForTestController.then(function(testController) {
+    return this.waitForTestController.then(async function(testController) {
+        this.globalRequestLogger = new RequestLogger({}, {
+            logRequestBody: true,
+            logResponseBody: true,
+            stringifyRequestBody: true
+        });
+        await testController.addRequestHooks(this.globalRequestLogger);
         return testController.maximizeWindow();
     });
 });
