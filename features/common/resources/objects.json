@@ -1,5 +1,10 @@
 {
   "googleHomePage": {
     "searchTextFieldXpath": "//input[@name = 'q']"
+  },
+  "githubLoginPage": {
+    "usernameFieldXpath" : "//input[@id = 'login_field']",
+    "passwordFieldXpath" : "//input[@id = 'password']",
+    "loginButtonXpath": "//input[@value = 'Sign in']"
   }
 }

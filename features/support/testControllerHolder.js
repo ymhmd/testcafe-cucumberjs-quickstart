@@ -1,5 +1,6 @@
 const testControllerHolder = {
 
+    globalRequestLogger: null,
     testController: null,
     captureResolver: null,
     getResolver: null,
